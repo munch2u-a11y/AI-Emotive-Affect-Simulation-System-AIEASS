@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aieass"
+version = "0.1.0"
+description = "Agent-agnostic Plutchik affect wave-packet system for memory-shaped AI control"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "AGPL-3.0-or-later"
+license-files = ["LICENSE", "LICENSES/AGPL-3.0-or-later.txt", "NOTICE.md"]
+authors = [
+  { name = "AIEASS Contributors" },
+  { name = "Helix AGI Contributors" },
+]
+keywords = [
+  "agents",
+  "affect",
+  "aieass",
+  "emotion-simulation",
+  "mcp",
+  "plutchik",
+  "wave-packet",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = []
+
+[project.optional-dependencies]
+mcp = ["mcp>=2.0,<3"]
+dev = ["build>=1.2", "ruff>=0.16"]
+
+[project.scripts]
+aieass = "plutchik_wave.cli:main"
+aieass-mcp = "plutchik_wave.mcp_server:main"
+plutchik-wave = "plutchik_wave.cli:main"
+plutchik-wave-mcp = "plutchik_wave.mcp_server:main"
+
+[project.urls]
+Homepage = "https://github.com/munch2u-a11y/AI-Emotive-Affect-Simulation-System-AIEASS"
+Documentation = "https://github.com/munch2u-a11y/AI-Emotive-Affect-Simulation-System-AIEASS#readme"
+Issues = "https://github.com/munch2u-a11y/AI-Emotive-Affect-Simulation-System-AIEASS/issues"
+Source = "https://github.com/munch2u-a11y/AI-Emotive-Affect-Simulation-System-AIEASS"
+Upstream = "https://github.com/munch2u-a11y/Helix-AGI"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+plutchik_wave = ["py.typed"]

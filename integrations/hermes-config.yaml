@@ -1,0 +1,14 @@
+mcp_servers:
+  aieass:
+    command: "aieass-mcp"
+    args:
+      - "--state-dir"
+      - "/absolute/path/to/affect-state"
+    tools:
+      include:
+        - "affect_step_lagrangian"
+        - "affect_step_direct"
+        - "affect_step_event"
+        - "affect_get_state"
+        - "affect_get_context"
+        - "affect_reset"

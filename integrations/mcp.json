@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "aieass": {
+      "command": "aieass-mcp",
+      "args": [
+        "--state-dir",
+        "/absolute/path/to/affect-state"
+      ]
+    }
+  }
+}

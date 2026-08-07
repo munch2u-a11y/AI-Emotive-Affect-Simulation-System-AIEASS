@@ -1,0 +1,16 @@
+[mcp_servers.aieass]
+command = "aieass-mcp"
+args = ["--state-dir", "/absolute/path/to/affect-state"]
+startup_timeout_sec = 20
+tool_timeout_sec = 30
+enabled = true
+
+# Read-only tools can be automatic; keep state-changing calls visible until the
+# host lifecycle integration is established and tested.
+default_tools_approval_mode = "prompt"
+
+[mcp_servers.aieass.tools.affect_get_state]
+approval_mode = "approve"
+
+[mcp_servers.aieass.tools.affect_get_context]
+approval_mode = "approve"
